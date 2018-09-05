@@ -11,8 +11,8 @@ function datRepositories() {
 function show() {
   const repos = JSON.parse(this.responseText)
   const repoList = "<ul>" + repos.map(repo => {
-    const dataUsername = 'data-username="' + repo.owner.login + '"'
-    const dataRepoName = 'data-repository="' + repo.name + '"'
+    const username = 'username="' + repo.owner.login + '"'
+    const repoName = 'repository="' + repo.name + '"'
     return(`
           <li>
             <h2>${repo.name}</h2>
